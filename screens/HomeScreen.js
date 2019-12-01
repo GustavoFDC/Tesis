@@ -12,6 +12,7 @@ import {
 import Icon from "react-native-vector-icons/FontAwesome";
 import { Button } from "react-native-elements";
 import { MonoText } from "../components/StyledText";
+import { Divider } from "react-native-elements";
 
 export default function HomeScreen() {
   return (
@@ -44,24 +45,17 @@ export default function HomeScreen() {
           <Button
             icon={<Icon name="arrow-right" size={15} color="white" />}
             iconRight
-            title="Button with right icon"
+            title="Registrar "
+          />
+        </View>
+        <View style={styles.helpContainer}>
+          <Button
+            icon={<Icon name="arrow-right" size={15} color="white" />}
+            iconRight
+            title="Ingresar "
           />
         </View>
       </ScrollView>
-
-      <View style={styles.tabBarInfoContainer}>
-        <Text style={styles.tabBarInfoText}>
-          This is a tab bar. You can edit it in:
-        </Text>
-
-        <View
-          style={[styles.codeHighlightContainer, styles.navigationFilename]}
-        >
-          <MonoText style={styles.codeHighlightText}>
-            navigation/MainTabNavigator.js
-          </MonoText>
-        </View>
-      </View>
     </View>
   );
 }
