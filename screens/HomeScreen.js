@@ -14,7 +14,8 @@ import { Button } from "react-native-elements";
 import { MonoText } from "../components/StyledText";
 import { Divider } from "react-native-elements";
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
+  console.log("props", navigation);
   return (
     <View style={styles.container}>
       <ScrollView
@@ -46,6 +47,9 @@ export default function HomeScreen() {
             icon={<Icon name="arrow-right" size={15} color="white" />}
             iconRight
             title="Registrar "
+            onPress={() => {
+              navigation.navigate("SignUp");
+            }}
           />
         </View>
         <View style={styles.helpContainer}>
@@ -53,6 +57,9 @@ export default function HomeScreen() {
             icon={<Icon name="arrow-right" size={15} color="white" />}
             iconRight
             title="Ingresar "
+            onPress={() => {
+              navigation.navigate("SignIn");
+            }}
           />
         </View>
       </ScrollView>
